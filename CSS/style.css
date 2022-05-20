@@ -1,0 +1,31 @@
+body{
+    font-weight: 'Roboto';
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    border-bottom: 4px solid rgb(170, 170, 170);
+    padding: 20px 0px 20px 0px;
+
+}
+
+.logo_principal{
+    width: 250px;    
+ 
+}
+
+.recherche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20pxs;
+    background-color: rgb(197, 197, 197);
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
