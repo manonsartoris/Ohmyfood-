@@ -1,0 +1,22 @@
+{
+  "name": "projet_3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manonsartoris/projet-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manonsartoris/projet-3/issues"
+  },
+  "homepage": "https://github.com/manonsartoris/projet-3#readme",
+  "description": ""
+}
