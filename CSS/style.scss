@@ -45,11 +45,12 @@ a{
 /*Loading Spinner*/
 
 .fa-spinner{
-    cursor: progress;
     position: absolute;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 }
+
 .fa-spinner::before {
     content: "";
     position: absolute;
@@ -57,8 +58,7 @@ a{
     height: 100%;
     z-index: 10001;
     overflow: hidden;
-
-    opacity: 0.6;
+    pointer-events: none;
 }
 .fa-spinner::after {
     box-sizing: border-box;
@@ -68,19 +68,21 @@ a{
     top: 50%;
     left: 50%;
     margin: -25px 0 0 -25px;
-    border: 3px solid $secondaire;
-    border-top: 3px solid #f3f3f3;
+    border: 4px solid $secondaire;
+    border-top: 4px solid transparent;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: fa-spinner 2s linear normal;
-    animation-fill-mode: forwards;
+    width: 70px;
+    height: 70px;
+    animation: fa-spinner 1000ms 1 linear normal;
+    animation-fill-mode:forwards;
 }
 @keyframes fa-spinner {
-    0% { transform: rotate(0deg); }
-    99.99% { transform: rotate(360deg); }
-    100%{ opacity: 0;}
+    0% { transform: rotate(0deg); opacity: 1;}
+    70%{ transform: rotate(290deg); opacity: 1;}
+    100%{ transform: rotate(360deg); opacity: 0;}
 }
+
+
 
 
 
@@ -99,10 +101,7 @@ header{
     margin: 17px;
     padding-top: 15px;
   }  
-  .fa-arrow-left-long{
-    width: 5px;
 
-  }
 }
 
 
@@ -115,11 +114,13 @@ header{
   justify-content: center;
   align-items: center;
   margin-top: 5px;
+
   .fa-location-dot{
     margin-right: 10px;
     font-size: 22px;
     color: #444444;
   }
+
   &__ville{
     width: 170px;
     height: 48px;
@@ -130,9 +131,10 @@ header{
     font-size: 20px;
     padding: 3px;
 
-      &:active{
-        border: #eee 2px solid;
-      }
+    &:focus{
+      box-shadow: 2px 2px 5px rgb(92, 92, 92);
+      background-color: #eeeded;
+    }
   }
 }
 
@@ -161,6 +163,7 @@ header{
     }
 
     &__explorer{
+      text-align: center;
       font-size: 20px;
       font-weight: 600;
       background: linear-gradient(to bottom right, $secondaire, $primaire 90%);
@@ -214,10 +217,12 @@ header{
           font-size: 25px;
           color: #8b8b8b;
           margin-right: 20px;
+        }
 
-            &:hover{
-              color: $primaire;
-            }
+
+        &:hover{
+          & > .fa-mobile-screen, .fa-list, .fa-store{
+          color: $primaire;}
         }
 
         &__numero{
@@ -255,6 +260,7 @@ header{
           }
 
           &__image{
+            width: 100%;
 
             &__img{
               width: 100%;
@@ -265,7 +271,7 @@ header{
             }
 
               .img1{
-                object-position: bottom;
+                object-position: center 60%;
               }
 
               .img2{
@@ -273,25 +279,26 @@ header{
               }
 
               .img3{
-                object-position: center 95%;
+                object-position: center 85%;
               }
 
               .img4{
-                object-position: center 95%;
+                object-position: center 85%;
               }
 
             &__nouveau{
               background-color: $terciaire;
               font-size: 19px;
               font-weight: 700;
+              width: 20%;
+              text-align: center;
               color: (darken($terciaire, 40%));
               border: solid 1px (darken($terciaire, 10%));
               border-radius: 4px;
-              padding: 8px 15px 8px 15px;
+              padding: 8px 0px 8px 0px;
               position: absolute;
-              display: flex;
               margin-left: 65%;
-              margin-top: 3%;
+              margin-top: 10px;
             }
         }
 
@@ -312,15 +319,35 @@ header{
             .fa-regular.fa-heart{
               font-size: 28px;
               color: #575757;
+              z-index: 0; 
 
               &:hover{
-                transform: scale(1.15);
-                transition: all 0.5s;
-                font-weight: bold;
-                background: -webkit-linear-gradient(#FF79DA, #9356DC);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+              animation: heart 600ms 1 normal;
+
+              @keyframes heart {
+                0%{
+                  transform: scale(1);
+                  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  font-weight: bold;
+                  -webkit-text-fill-color: transparent;
+                  opacity: 0;
+                }
+                100%{
+                  transform: scale(1.15);
+                  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  font-weight: bold;
+                  -webkit-text-fill-color: transparent;
+                  opacity: 1;
+                }
               }
+
+              
+            }
+              
             }
             
           }
@@ -356,12 +383,18 @@ header{
           margin-right: 10px;
         }
 
+        &:hover{
+          & > .fa-handshake-angle, .fa-utensils{
+            color: $secondaire;
+          }
+        }
+
         &__a{
           font-size: 20px;
           color: #fff;
 
             &:hover{
-              color: $secondaire;
+              color: $secondaire; 
             }
         }
     }
@@ -389,6 +422,22 @@ header{
   overflow: hidden;
 }
 
+.img_1{
+  object-position: center;
+}
+
+.img_2{
+  object-position: center 63%;
+}
+
+.img_3{
+  object-position: center 100%;
+}
+
+.img_4{
+  object-position: center 85%;
+}
+
 /* Menu */
 
 .menu{
@@ -405,16 +454,25 @@ header{
       justify-content: space-between;
 
       .fa-regular.fa-heart{
+        margin-left: 25px;
         font-size: 28px;
-        color: #5a5a5a;
+        color: #575757;
+        transition: transform 350ms 50ms;
+        background: -webkit-linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
 
-          &:hover{
-          color: $secondaire;
-          }
+        &:hover{
+          transform: scale(1.25);
+          transition-timing-function: ease-in-out;
+          font-weight: bold;
+          -webkit-text-fill-color: transparent;
+        }
+
       }
     }
 
     &__repas{
+      margin-right: 10px;
 
       &__titre{
         border-bottom: $terciaire 3px solid;
@@ -422,32 +480,108 @@ header{
       }
 
       &__liste{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
-        background-color: #fff;
-        margin: 10px 0px 10px 0px;
-        border-radius: 15px;
-        padding: 2px 10px 2px 10px;
-      
-          &__texte{
 
-            width: 70%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          background-color: #fff;
+          margin: 10px 0px 10px 0px;
+          border-radius: 15px;
+          padding: 0px 0px 0px 15px;
 
-            h3, p{
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
+
+          animation: open 1000ms 1 ease-out;
+
+          @keyframes open {
+            0%{transform: translateY(35px); opacity: 0;}
+            40%{transform: translateY(35px); opacity: 0;}
+            100%{transform: translateY(0px); opacity: 1;}
+          }
+
+            &__texte{
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+              justify-content: space-between;
+
+              .texte{
+                width: 65%;
+
+                h3, p{
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+
+              }
+
+              .prix{
+                font-weight: 700;
+              } 
+            }
+
+            &__animation{
+              width: 15px;
+
+                .fa-check{
+                  font-size: 0px;
+                }
 
             }
-          }
 
-          &__prix{
-            font-weight: 700;
+            &:hover {
+              & > .menu__repas__liste__animation{  
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 7%;             
+                animation: progress-bar 500ms ;
+                background: $terciaire;
+                margin-left: 10px;
+                border-radius: 0px 15px 15px 0px;
+                padding: 30px;
+  
+  
+                  .fa-check{
+                    text-align: center;
+                    font-size: 20px;
+                    color: $terciaire;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 35px;
+                    height: 35px;
+                    padding: auto;
+                    border-radius: 50%;
+                    background: #fff;
+                    animation: spin 600ms 1 linear;
+                    -webkit-animation: spin 600ms 1 linear;
+      
+                      @keyframes spin {
+                        0%{transform: rotate(0deg);}
+                        50%{transform: rotate(0deg);}
+                        100%{transform: rotate(360deg);}
+                      }
+      
+                      @-webkit-keyframes spin {
+                        0%{-webkit-transform: rotate(0deg);}
+                        50%{-webkit-transform: rotate(0deg);}
+                        100%{-webkit-transform: rotate(360deg);}
+                      }
+                  }
+                  
+              }
+            }
+
+            @keyframes progress-bar {
+              0%{transform: translateX(250px);}
+              100%{transform: translateX(0);}
+            }
+
           }
-        }
-      }
 
       &__commander{
         text-align: center;
@@ -460,6 +594,7 @@ header{
         margin: 5% 25%;
 
           &:hover{
+            font-size: 23px;
             box-shadow: 3px 3px 10px #575757;
           }
 
@@ -467,49 +602,8 @@ header{
             color: #fff;
           }
       }
-}
 
+    }
 
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*            .fa-heart{
-              font-size: 25px;
-              color: #fcfcfc;
-              background-color: #333333;
-              border-radius: 60%;
-              padding: 2px;
-            }
-            .fa-heart::before {
-                content: "\f004";
-                font-weight: bold;
-                transition: color 1s ease-out;
-            }
-            .fa-heart:hover::before{
-                color: red;
-                cursor: pointer;
-            }*/

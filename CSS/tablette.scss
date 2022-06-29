@@ -1,0 +1,39 @@
+@media all and (min-width: 779px) and (max-width: 992px)
+{
+    .menu{
+
+        &__titre{
+            justify-content: center;
+        }
+    }
+
+    .img_1{
+        object-position: center ;
+    }
+
+    .img_2{
+        object-position: center 60%;
+    }
+
+    .img_3{
+        object-position: center 85%;
+    }
+
+    .img_4{
+        object-position: center 90%;
+    }
+
+    .restaurant__menu__image__img{
+        height: 300px;
+
+        .img1{
+            object-position: top;
+        }
+
+    }
+
+    .restaurant__menu__image__nouveau{
+        margin-left: 70%;
+    }
+
+}

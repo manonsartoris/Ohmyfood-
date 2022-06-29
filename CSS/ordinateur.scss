@@ -1,0 +1,193 @@
+@media screen and (min-width: 993px)
+{
+    $primaire : #9356DC;
+    $secondaire : #FF79DA;
+    $terciaire : #99E2D0;
+
+    /* Header */
+
+    .logo-principal{
+        width: 400px;
+        margin: 17px;
+        padding-top: 15px;
+    }  
+
+
+    /* Recherche */
+
+    .recherche{
+
+        justify-content: center;
+        padding: 20px 50px;
+
+        &__ville{
+            width: 80%;
+            background: rgb(240, 240, 240);
+            border: #9b9b9b 2px solid;
+            border-radius: 20px;
+            text-align: center;
+
+        }
+
+    }
+
+    /* Réserver */
+
+    .reservez{
+        flex-direction: row;
+        justify-content: space-around;
+
+
+            h1{
+            text-align: start;
+            margin-left: 0px;
+            }
+
+            p{
+            text-align: start;
+            }
+
+            &__explorer{
+            font-size: 25px;
+            padding: 25px 50px 25px 50px;
+            }
+        }
+
+    /* Fonctionnement */
+
+    .fonctionnement{
+
+        .groupe{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        &__texte{
+        width: 25%;
+        }
+
+    }
+
+    /* Restaurant */
+
+    .restaurant{
+
+        .menus{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        &__menu{
+            width: 45%;
+    
+            &__image{
+
+                &__img{
+                    height: 300px;
+                }
+
+                &__nouveau{
+                    width: 10%;
+                    margin-left: 30%;
+                    margin-top: 10px;
+                }
+
+            }
+
+        }
+
+    }
+
+
+    /* Footer */
+
+    .footer{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 70px 35px 70px 35px;
+    
+        .logo-secondaire{
+            width: 200px;
+        }
+
+    }
+
+    /*----------------------------------------------*/
+
+    /* Header menu */
+    .fa-arrow-left-long{
+        font-size: 25px;
+    }
+
+    /* Image menu */
+
+    .img_menu{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center 70%;
+        overflow: hidden;
+    }
+
+    /* Menu */
+
+    .menu{
+
+        &__titre{
+            justify-content: center;
+        }
+
+        &__repas{
+
+
+            &__liste{
+                padding: 0px 0px 0px 20px;
+
+                &:hover {
+                    & > .menu__repas__liste__animation{  
+                    width: 15%;
+                    }
+                }
+
+                }
+
+    
+        }
+    
+        }
+
+        .img1{
+            object-position: center;
+        }
+
+        .img2{
+            object-position: center;
+        }
+
+        .img3{
+            object-position: center;
+        }
+
+        .img4{
+            object-position: top;
+        }
+
+        .img_1{
+            object-position: center ;
+        }
+    
+        .img_2{
+            object-position: center 61%;
+        }
+    
+        .img_3{
+            object-position: center 85%;
+        }
+    
+        .img_4{
+            object-position: center 80%;
+        }
+}
