@@ -6,24 +6,28 @@
     margin: 17px;
     padding-top: 15px;
   }
-
   /* Recherche */
   .recherche {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 20px 50px;
   }
   .recherche__ville {
     width: 80%;
-    background: rgb(240, 240, 240);
+    background: #f0f0f0;
     border: #9b9b9b 2px solid;
     border-radius: 20px;
     text-align: center;
   }
-
   /* Réserver */
   .reservez {
-    flex-direction: row;
-    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .reservez h1 {
     text-align: start;
@@ -36,22 +40,28 @@
     font-size: 25px;
     padding: 25px 50px 25px 50px;
   }
-
   /* Fonctionnement */
   .fonctionnement .groupe {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .fonctionnement__texte {
     width: 25%;
   }
-
   /* Restaurant */
   .restaurant .menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .restaurant__menu {
     width: 45%;
@@ -64,24 +74,27 @@
     margin-left: 30%;
     margin-top: 10px;
   }
-
   /* Footer */
   .footer {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 70px 35px 70px 35px;
   }
   .footer .logo-secondaire {
     width: 200px;
   }
-
   /*----------------------------------------------*/
   /* Header menu */
   .fa-arrow-left-long {
     font-size: 25px;
   }
-
   /* Image menu */
   .img_menu {
     width: 100%;
@@ -92,10 +105,11 @@
        object-position: center 70%;
     overflow: hidden;
   }
-
   /* Menu */
   .menu__titre {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .menu__repas__liste {
     padding: 0px 0px 0px 20px;
@@ -103,44 +117,37 @@
   .menu__repas__liste:hover > .menu__repas__liste__animation {
     width: 15%;
   }
-
   .img1 {
     -o-object-position: center;
        object-position: center;
   }
-
   .img2 {
     -o-object-position: center;
        object-position: center;
   }
-
   .img3 {
     -o-object-position: center;
        object-position: center;
   }
-
   .img4 {
     -o-object-position: top;
        object-position: top;
   }
-
   .img_1 {
     -o-object-position: center;
        object-position: center;
   }
-
   .img_2 {
     -o-object-position: center 61%;
        object-position: center 61%;
   }
-
   .img_3 {
     -o-object-position: center 85%;
        object-position: center 85%;
   }
-
   .img_4 {
     -o-object-position: center 80%;
        object-position: center 80%;
   }
-}/*# sourceMappingURL=ordinateur.css.map */
+}
+/*# sourceMappingURL=ordinateur.css.map */

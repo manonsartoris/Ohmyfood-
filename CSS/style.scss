@@ -44,26 +44,7 @@ a{
 
 /*Loading Spinner*/
 
-.fa-spinner{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.fa-spinner::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10001;
-    overflow: hidden;
-    pointer-events: none;
-}
-.fa-spinner::after {
-    box-sizing: border-box;
-    z-index: 10002;
-    content: "";
+.spinner{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -73,16 +54,27 @@ a{
     border-radius: 50%;
     width: 70px;
     height: 70px;
-    animation: fa-spinner 1000ms 1 linear normal;
+    animation: spinner 1300ms 1 linear normal;
     animation-fill-mode:forwards;
 }
-@keyframes fa-spinner {
+
+@keyframes spinner {
     0% { transform: rotate(0deg); opacity: 1;}
     70%{ transform: rotate(290deg); opacity: 1;}
     100%{ transform: rotate(360deg); opacity: 0;}
 }
 
+.contain-spinner{
+  width: 100%;
+  height: 100%;
+  animation: contain-spinner 1400ms 1 linear normal;
+}
 
+@keyframes contain-spinner {
+  0% {  background-color: #444444; opacity: 0.5;  position: fixed;}
+  70% {  background-color: #444444; opacity: 0.5; position: fixed;}
+  100% {  background-color: #444444; opacity: 0;}
+}
 
 
 
@@ -171,9 +163,11 @@ header{
       border-radius: 50px;
       box-shadow: 3px 3px 10px #999999;
       margin: 20px 0px 50px 0px;
+      cursor: pointer;
 
         &:hover{
           box-shadow: 3px 3px 10px #575757;
+          background: linear-gradient(to bottom right, lighten($secondaire, 5%), lighten($primaire, 5%) 90%);
         }
 
         a{
@@ -207,9 +201,10 @@ header{
       border-radius: 30px;
       box-shadow: 5px 5px 7px #e9e8e8;
       margin: 27px 10px 27px 10px ;
+      cursor: pointer;
 
         &:hover{
-          background: (lighten($primaire, 30%));
+          background: (lighten($primaire, 35%));
           box-shadow: 5px 5px 7px #c4c4c4;
         }
 
@@ -322,34 +317,35 @@ header{
               z-index: 0; 
 
               &:hover{
-              animation: heart 600ms 1 normal;
+              animation: heart 1000ms 1 normal;
 
-              @keyframes heart {
-                0%{
-                  transform: scale(1);
-                  background: -webkit-linear-gradient(#FF79DA, #9356DC);
-                  background-clip: text;
-                  -webkit-background-clip: text;
-                  font-weight: bold;
-                  -webkit-text-fill-color: transparent;
-                  opacity: 0;
-                }
-                100%{
-                  transform: scale(1.15);
-                  background: -webkit-linear-gradient(#FF79DA, #9356DC);
-                  background-clip: text;
-                  -webkit-background-clip: text;
-                  font-weight: bold;
-                  -webkit-text-fill-color: transparent;
-                  opacity: 1;
+                @keyframes heart {
+                  0%{
+                    transform: scale(1);
+                    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    font-weight: bold;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 0;
+                  }
+                  100%{
+                    transform: scale(1.15);
+                    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    font-weight: bold;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 1;
+                  }
                 }
               }
-
               
             }
-              
-            }
+           
             
+
+
           }
 
       }
@@ -454,22 +450,40 @@ header{
       justify-content: space-between;
 
       .fa-regular.fa-heart{
-        margin-left: 25px;
         font-size: 28px;
+        margin-left: 20px;
         color: #575757;
-        transition: transform 350ms 50ms;
-        background: -webkit-linear-gradient(#FF79DA, #9356DC);
-        background-clip: text;
+        z-index: 0; 
 
         &:hover{
-          transform: scale(1.25);
-          transition-timing-function: ease-in-out;
-          font-weight: bold;
-          -webkit-text-fill-color: transparent;
+        animation: heart 600ms 1 normal;
+
+        @keyframes heart {
+          0%{
+            transform: scale(1);
+            background: -webkit-linear-gradient(#FF79DA, #9356DC);
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-weight: bold;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+          }
+          100%{
+            transform: scale(1.15);
+            background: -webkit-linear-gradient(#FF79DA, #9356DC);
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-weight: bold;
+            -webkit-text-fill-color: transparent;
+            opacity: 1;
+          }
         }
 
+        
       }
-    }
+        
+      }
+  }
 
     &__repas{
       margin-right: 10px;
@@ -477,6 +491,52 @@ header{
       &__titre{
         border-bottom: $terciaire 3px solid;
         width: 50px;
+      }
+
+      .un{
+        animation: open 600ms 1 ease-out;
+      }
+
+      .deux{
+        animation: open 900ms 1 ease-out;
+      }
+
+      .trois{
+        animation: open 1200ms 1 ease-out;
+      }
+  
+      .quatre{
+        animation: open 1500ms 1 ease-out;
+      }
+
+      .cinq{
+        animation: open 1800ms 1 ease-out;
+      }
+
+      .six{
+        animation: open 2100ms 1 ease-out;
+      }
+
+      .sept{
+        animation: open 2400ms 1 ease-out;
+      }
+
+      .huit{
+        animation: open 2700ms 1 ease-out;
+      }
+
+      .neuf{
+        animation: open 3000ms 1 ease-out;
+      }
+
+      .dix{
+        animation: open 3300ms 1 ease-out;
+      }
+
+      @keyframes open {
+        0%{transform: translateY(35px); opacity: 0;}
+        40%{transform: translateY(35px); opacity: 0;}
+        100%{transform: translateY(0px); opacity: 1;}
       }
 
       &__liste{
@@ -490,15 +550,6 @@ header{
           margin: 10px 0px 10px 0px;
           border-radius: 15px;
           padding: 0px 0px 0px 15px;
-
-
-          animation: open 1000ms 1 ease-out;
-
-          @keyframes open {
-            0%{transform: translateY(35px); opacity: 0;}
-            40%{transform: translateY(35px); opacity: 0;}
-            100%{transform: translateY(0px); opacity: 1;}
-          }
 
             &__texte{
               width: 100%;
@@ -554,7 +605,6 @@ header{
                     align-items: center;
                     width: 35px;
                     height: 35px;
-                    padding: auto;
                     border-radius: 50%;
                     background: #fff;
                     animation: spin 600ms 1 linear;
@@ -596,6 +646,7 @@ header{
           &:hover{
             font-size: 23px;
             box-shadow: 3px 3px 10px #575757;
+            background: linear-gradient(to bottom right, lighten($secondaire, 5%), lighten($primaire, 5%) 90%);
           }
 
           a{

@@ -1,28 +1,25 @@
 @media all and (min-width: 779px) and (max-width: 992px) {
   .menu__titre {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   .img_1 {
     -o-object-position: center;
        object-position: center;
   }
-
   .img_2 {
     -o-object-position: center 60%;
        object-position: center 60%;
   }
-
   .img_3 {
     -o-object-position: center 85%;
        object-position: center 85%;
   }
-
   .img_4 {
     -o-object-position: center 90%;
        object-position: center 90%;
   }
-
   .restaurant__menu__image__img {
     height: 300px;
   }
@@ -30,8 +27,8 @@
     -o-object-position: top;
        object-position: top;
   }
-
   .restaurant__menu__image__nouveau {
     margin-left: 70%;
   }
-}/*# sourceMappingURL=tablette.css.map */
+}
+/*# sourceMappingURL=tablette.css.map */
