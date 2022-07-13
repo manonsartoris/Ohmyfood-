@@ -604,54 +604,75 @@ header .logo-principal {
   width: 50px;
 }
 
-.menu__repas .un {
+.menu__repas__liste {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  margin: 10px 0px 10px 0px;
+  border-radius: 15px;
+  padding: 0px 0px 0px 15px;
+}
+
+.menu__repas__liste:nth-child(1) {
   -webkit-animation: open 600ms 1 ease-out;
           animation: open 600ms 1 ease-out;
 }
 
-.menu__repas .deux {
-  -webkit-animation: open 900ms 1 ease-out;
-          animation: open 900ms 1 ease-out;
+.menu__repas__liste:nth-child(2) {
+  -webkit-animation: open 800ms 1 ease-out;
+          animation: open 800ms 1 ease-out;
 }
 
-.menu__repas .trois {
+.menu__repas__liste:nth-child(3) {
+  -webkit-animation: open 1000ms 1 ease-out;
+          animation: open 1000ms 1 ease-out;
+}
+
+.menu__repas__liste:nth-child(4) {
   -webkit-animation: open 1200ms 1 ease-out;
           animation: open 1200ms 1 ease-out;
 }
 
-.menu__repas .quatre {
-  -webkit-animation: open 1500ms 1 ease-out;
-          animation: open 1500ms 1 ease-out;
+.menu__repas__liste:nth-child(5) {
+  -webkit-animation: open 1400ms 1 ease-out;
+          animation: open 1400ms 1 ease-out;
 }
 
-.menu__repas .cinq {
+.menu__repas__liste:nth-child(6) {
+  -webkit-animation: open 1600ms 1 ease-out;
+          animation: open 1600ms 1 ease-out;
+}
+
+.menu__repas__liste:nth-child(7) {
   -webkit-animation: open 1800ms 1 ease-out;
           animation: open 1800ms 1 ease-out;
 }
 
-.menu__repas .six {
-  -webkit-animation: open 2100ms 1 ease-out;
-          animation: open 2100ms 1 ease-out;
+.menu__repas__liste:nth-child(8) {
+  -webkit-animation: open 2000ms 1 ease-out;
+          animation: open 2000ms 1 ease-out;
 }
 
-.menu__repas .sept {
+.menu__repas__liste:nth-child(9) {
+  -webkit-animation: open 2200ms 1 ease-out;
+          animation: open 2200ms 1 ease-out;
+}
+
+.menu__repas__liste:nth-child(10) {
   -webkit-animation: open 2400ms 1 ease-out;
           animation: open 2400ms 1 ease-out;
-}
-
-.menu__repas .huit {
-  -webkit-animation: open 2700ms 1 ease-out;
-          animation: open 2700ms 1 ease-out;
-}
-
-.menu__repas .neuf {
-  -webkit-animation: open 3000ms 1 ease-out;
-          animation: open 3000ms 1 ease-out;
-}
-
-.menu__repas .dix {
-  -webkit-animation: open 3300ms 1 ease-out;
-          animation: open 3300ms 1 ease-out;
 }
 
 @-webkit-keyframes open {
@@ -688,27 +709,6 @@ header .logo-principal {
             transform: translateY(0px);
     opacity: 1;
   }
-}
-
-.menu__repas__liste {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: #fff;
-  margin: 10px 0px 10px 0px;
-  border-radius: 15px;
-  padding: 0px 0px 0px 15px;
 }
 
 .menu__repas__liste__texte {

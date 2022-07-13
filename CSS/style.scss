@@ -499,52 +499,6 @@ header{
         width: 50px;
       }
 
-      .un{
-        animation: open 600ms 1 ease-out;
-      }
-
-      .deux{
-        animation: open 900ms 1 ease-out;
-      }
-
-      .trois{
-        animation: open 1200ms 1 ease-out;
-      }
-  
-      .quatre{
-        animation: open 1500ms 1 ease-out;
-      }
-
-      .cinq{
-        animation: open 1800ms 1 ease-out;
-      }
-
-      .six{
-        animation: open 2100ms 1 ease-out;
-      }
-
-      .sept{
-        animation: open 2400ms 1 ease-out;
-      }
-
-      .huit{
-        animation: open 2700ms 1 ease-out;
-      }
-
-      .neuf{
-        animation: open 3000ms 1 ease-out;
-      }
-
-      .dix{
-        animation: open 3300ms 1 ease-out;
-      }
-
-      @keyframes open {
-        0%{transform: translateY(35px); opacity: 0;}
-        40%{transform: translateY(35px); opacity: 0;}
-        100%{transform: translateY(0px); opacity: 1;}
-      }
-
       &__liste{
 
           width: 100%;
@@ -556,6 +510,52 @@ header{
           margin: 10px 0px 10px 0px;
           border-radius: 15px;
           padding: 0px 0px 0px 15px;
+
+          &:nth-child(1){
+            animation: open 600ms 1 ease-out;
+          }
+    
+          &:nth-child(2){
+            animation: open 800ms 1 ease-out;
+          }
+    
+          &:nth-child(3){
+            animation: open 1000ms 1 ease-out;
+          }
+      
+          &:nth-child(4){
+            animation: open 1200ms 1 ease-out;
+          }
+    
+          &:nth-child(5){
+            animation: open 1400ms 1 ease-out;
+          }
+    
+          &:nth-child(6){
+            animation: open 1600ms 1 ease-out;
+          }
+    
+          &:nth-child(7){
+            animation: open 1800ms 1 ease-out;
+          }
+    
+          &:nth-child(8){
+            animation: open 2000ms 1 ease-out;
+          }
+    
+          &:nth-child(9){
+            animation: open 2200ms 1 ease-out;
+          }
+    
+          &:nth-child(10){
+            animation: open 2400ms 1 ease-out;
+          }
+    
+          @keyframes open {
+            0%{transform: translateY(35px); opacity: 0;}
+            40%{transform: translateY(35px); opacity: 0;}
+            100%{transform: translateY(0px); opacity: 1;}
+          }
 
             &__texte{
               width: 100%;
