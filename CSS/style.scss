@@ -311,35 +311,40 @@ header{
               color: #5a5a5a;
             }
 
-            .fa-regular.fa-heart{
+            .fa-regular.fa-heart {
+              margin-left: 15px;
               font-size: 28px;
               color: #575757;
-              z-index: 0; 
-
-              &:hover{
-              animation: heart 1000ms 1 normal;
-
-                @keyframes heart {
-                  0%{
-                    transform: scale(1);
-                    background: -webkit-linear-gradient(#FF79DA, #9356DC);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    font-weight: bold;
-                    -webkit-text-fill-color: transparent;
-                    opacity: 0;
-                  }
-                  100%{
-                    transform: scale(1.15);
-                    background: -webkit-linear-gradient(#FF79DA, #9356DC);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    font-weight: bold;
-                    -webkit-text-fill-color: transparent;
-                    opacity: 1;
-                  }
-                }
-              }
+              background-clip: text;
+              position: relative;
+            }
+      
+            
+            .fa-solid.fa-heart{
+              transform: scale(0);
+              transition: all 0.5s linear 0s;
+              position: absolute;
+              font-size: 28px;        
+              background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+              background: -webkit-linear-gradient(#FF79DA, #9356DC);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              width: 100%;
+              height: 0%;
+              left: 0;
+              bottom: 0;
+              color: transparent;        
+            }
+      
+            .fa-regular.fa-heart:hover{
+              color: $secondaire;
+            }
+      
+            .fa-regular.fa-heart:hover .fa-solid.fa-heart {
+              transform: scale(1);
+              height: 100%;
+            }
               
             }
            
@@ -350,7 +355,7 @@ header{
 
       }
   
-}
+
 
 
 /* Footer */
@@ -449,41 +454,42 @@ header{
       align-items: center;
       justify-content: space-between;
 
-      .fa-regular.fa-heart{
+
+      .fa-regular.fa-heart {
+        margin-left: 15px;
         font-size: 28px;
-        margin-left: 20px;
         color: #575757;
-        z-index: 0; 
-
-        &:hover{
-        animation: heart 600ms 1 normal;
-
-        @keyframes heart {
-          0%{
-            transform: scale(1);
-            background: -webkit-linear-gradient(#FF79DA, #9356DC);
-            background-clip: text;
-            -webkit-background-clip: text;
-            font-weight: bold;
-            -webkit-text-fill-color: transparent;
-            opacity: 0;
-          }
-          100%{
-            transform: scale(1.15);
-            background: -webkit-linear-gradient(#FF79DA, #9356DC);
-            background-clip: text;
-            -webkit-background-clip: text;
-            font-weight: bold;
-            -webkit-text-fill-color: transparent;
-            opacity: 1;
-          }
-        }
-
-        
+        background-clip: text;
+        position: relative;
       }
-        
+
+      
+      .fa-solid.fa-heart{
+        transform: scale(0);
+        transition: all 0.5s linear 0s;
+        position: absolute;
+        font-size: 28px;        
+        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+        background: -webkit-linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: 100%;
+        height: 0%;
+        left: 0;
+        bottom: 0;
+        color: transparent;        
       }
-  }
+
+      .fa-regular.fa-heart:hover{
+        color: $secondaire;
+      }
+
+      .fa-regular.fa-heart:hover .fa-solid.fa-heart {
+        transform: scale(1);
+        height: 100%;
+      }
+    }
 
     &__repas{
       margin-right: 10px;
