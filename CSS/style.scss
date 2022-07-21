@@ -325,8 +325,7 @@ header{
               transition: all 0.5s linear 0s;
               position: absolute;
               font-size: 28px;        
-              background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-              background: -webkit-linear-gradient(#FF79DA, #9356DC);
+              background: linear-gradient(to bottom right, $secondaire, $primaire 90%);
               background-clip: text;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
@@ -335,10 +334,6 @@ header{
               left: 0;
               bottom: 0;
               color: transparent;        
-            }
-      
-            .fa-regular.fa-heart:hover{
-              color: $secondaire;
             }
       
             .fa-regular.fa-heart:hover .fa-solid.fa-heart {
@@ -469,8 +464,7 @@ header{
         transition: all 0.5s linear 0s;
         position: absolute;
         font-size: 28px;        
-        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-        background: -webkit-linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient(to bottom right, $secondaire, $primaire 90%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -479,10 +473,6 @@ header{
         left: 0;
         bottom: 0;
         color: transparent;        
-      }
-
-      .fa-regular.fa-heart:hover{
-        color: $secondaire;
       }
 
       .fa-regular.fa-heart:hover .fa-solid.fa-heart {

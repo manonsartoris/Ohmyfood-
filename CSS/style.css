@@ -420,7 +420,8 @@ header .logo-principal {
   transition: all 0.5s linear 0s;
   position: absolute;
   font-size: 28px;
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), color-stop(90%, #9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -429,10 +430,6 @@ header .logo-principal {
   left: 0;
   bottom: 0;
   color: transparent;
-}
-
-.restaurant__menu__texte .fa-regular.fa-heart:hover {
-  color: #FF79DA;
 }
 
 .restaurant__menu__texte .fa-regular.fa-heart:hover .fa-solid.fa-heart {
@@ -574,7 +571,8 @@ header .logo-principal {
   transition: all 0.5s linear 0s;
   position: absolute;
   font-size: 28px;
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), color-stop(90%, #9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -583,10 +581,6 @@ header .logo-principal {
   left: 0;
   bottom: 0;
   color: transparent;
-}
-
-.menu__titre .fa-regular.fa-heart:hover {
-  color: #FF79DA;
 }
 
 .menu__titre .fa-regular.fa-heart:hover .fa-solid.fa-heart {
