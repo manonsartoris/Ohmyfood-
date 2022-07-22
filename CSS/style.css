@@ -406,36 +406,60 @@ header .logo-principal {
 }
 
 .restaurant__menu__texte .fa-regular.fa-heart {
-  margin-left: 15px;
   font-size: 28px;
   color: #575757;
-  background-clip: text;
-  position: relative;
+  z-index: 0;
 }
 
-.restaurant__menu__texte .fa-solid.fa-heart {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all 0.5s linear 0s;
-  transition: all 0.5s linear 0s;
-  position: absolute;
-  font-size: 28px;
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), color-stop(90%, #9356DC));
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: 100%;
-  height: 0%;
-  left: 0;
-  bottom: 0;
-  color: transparent;
+.restaurant__menu__texte .fa-regular.fa-heart:hover {
+  -webkit-animation: heart 1500ms 1 normal;
+          animation: heart 1500ms 1 normal;
 }
 
-.restaurant__menu__texte .fa-regular.fa-heart:hover .fa-solid.fa-heart {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  height: 100%;
+@-webkit-keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+  }
+}
+
+@keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+  }
 }
 
 /* Footer */
@@ -557,36 +581,38 @@ header .logo-principal {
 }
 
 .menu__titre .fa-regular.fa-heart {
-  margin-left: 15px;
   font-size: 28px;
   color: #575757;
-  background-clip: text;
-  position: relative;
+  margin-left: 10px;
+  z-index: 0;
 }
 
-.menu__titre .fa-solid.fa-heart {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all 0.5s linear 0s;
-  transition: all 0.5s linear 0s;
-  position: absolute;
-  font-size: 28px;
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), color-stop(90%, #9356DC));
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: 100%;
-  height: 0%;
-  left: 0;
-  bottom: 0;
-  color: transparent;
+.menu__titre .fa-regular.fa-heart:hover {
+  -webkit-animation: heart 1500ms 1 normal;
+          animation: heart 1500ms 1 normal;
 }
 
-.menu__titre .fa-regular.fa-heart:hover .fa-solid.fa-heart {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  height: 100%;
+@keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+  }
 }
 
 .menu__repas {

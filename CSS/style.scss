@@ -295,7 +295,7 @@ header{
               margin-left: 65%;
               margin-top: 10px;
             }
-        }
+          }
 
           &__texte{
             padding: 0px 20px 0px 20px;
@@ -311,47 +311,43 @@ header{
               color: #5a5a5a;
             }
 
-            .fa-regular.fa-heart {
-              margin-left: 15px;
+            .fa-regular.fa-heart{
               font-size: 28px;
               color: #575757;
-              background-clip: text;
-              position: relative;
-            }
-      
-            
-            .fa-solid.fa-heart{
-              transform: scale(0);
-              transition: all 0.5s linear 0s;
-              position: absolute;
-              font-size: 28px;        
-              background: linear-gradient(to bottom right, $secondaire, $primaire 90%);
-              background-clip: text;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              width: 100%;
-              height: 0%;
-              left: 0;
-              bottom: 0;
-              color: transparent;        
-            }
-      
-            .fa-regular.fa-heart:hover .fa-solid.fa-heart {
-              transform: scale(1);
-              height: 100%;
-            }
-              
-            }
-           
-            
+              z-index: 0; 
 
+              &:hover{
+      
+                animation: heart 1500ms 1 normal;
 
+                @keyframes heart {
+                  0%{
+                    transform: scale(1);
+                    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    font-weight: bold;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 0;
+                  }
+                  100%{
+                    transform: scale(1.15);
+                    background: -webkit-linear-gradient(#FF79DA, #9356DC);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    font-weight: bold;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 1;
+                  }
+      
+                }
+              }
+
+            }
           }
 
       }
-  
-
-
+}
 
 /* Footer */
 
@@ -450,36 +446,41 @@ header{
       justify-content: space-between;
 
 
-      .fa-regular.fa-heart {
-        margin-left: 15px;
+      .fa-regular.fa-heart{
         font-size: 28px;
         color: #575757;
-        background-clip: text;
-        position: relative;
-      }
+        margin-left: 10px;
+        z-index: 0; 
 
-      
-      .fa-solid.fa-heart{
-        transform: scale(0);
-        transition: all 0.5s linear 0s;
-        position: absolute;
-        font-size: 28px;        
-        background: linear-gradient(to bottom right, $secondaire, $primaire 90%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        width: 100%;
-        height: 0%;
-        left: 0;
-        bottom: 0;
-        color: transparent;        
-      }
+        &:hover{
 
-      .fa-regular.fa-heart:hover .fa-solid.fa-heart {
-        transform: scale(1);
-        height: 100%;
+          animation: heart 1500ms 1 normal;
+
+          @keyframes heart {
+            0%{
+              transform: scale(1);
+              background: -webkit-linear-gradient(#FF79DA, #9356DC);
+              background-clip: text;
+              -webkit-background-clip: text;
+              font-weight: bold;
+              -webkit-text-fill-color: transparent;
+              opacity: 0;
+            }
+            100%{
+              transform: scale(1.15);
+              background: -webkit-linear-gradient(#FF79DA, #9356DC);
+              background-clip: text;
+              -webkit-background-clip: text;
+              font-weight: bold;
+              -webkit-text-fill-color: transparent;
+              opacity: 1;
+            }
+
+          }
+        }
+
       }
-    }
+     }
 
     &__repas{
       margin-right: 10px;
@@ -653,4 +654,5 @@ header{
     }
 
   }
-
+ 
+ 
